@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<!-- 🏠🏠🏠🏠 Структура квартиры -->
+
+<body>
+    <div class="flat">
+        <div class="leftPart">
+            <div class="room" id='room1'>
+
+            </div>
+            <div class="room" id='room2'>
+
+            </div>
+        </div>
+        <div class="rightPart">
+            <div class="room" id='room3'>
+                <button class='bigButton' id='switchLightButton'>💡</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- Внешний вид 🎨🎨🎨🎨🎨 -->
+<style>
+    /* Квартира */
+    
+    .flat {
+        width: 500px;
+        height: 400px;
+        background: gray;
+        border: 5px solid black;
+    }
+    /* Части квартиры */
+    
+    .leftPart {
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+    
+    .rightPart {
+        width: 50%;
+        height: 100%;
+        float: right;
+    }
+    /* Комнаты */
+    
+    .room {
+        background: lightgray;
+    }
+    
+    #room1 {
+        width: 100%;
+        height: 50%;
+        background: lightslategray;
+    }
+    
+    #room2 {
+        width: 100%;
+        height: 50%;
+        background: lightgreen;
+    }
+    
+    #room3 {
+        width: 100%;
+        height: 100%;
+        background: blue;
+    }
+    /* Внешний вид кнопки */
+    
+    .bigButton {
+        font-size: 50px;
+    }
+</style>
+
+<!-- Действия 💡💡💡💡 -->
+<script>
+    // Заведем переменные
+    let isLightOn = false;
+
+    // Скажем бразуеру чтобы он нашел элемент с id = switchLightButton 
+    // И добавил ему слушателя событий, в нашем случае это событие Нажатие (click)
+    document.getElementById('switchLightButton').addEventListener("click", function() {
+
+
+        // Если свет выключен то присвоем светлый фон
+        if (isLightOn === false) {
+            document.getElementById("room3").style.backgroundColor = "lightBlue";
+            isLightOn = true;
+        }
+        // Если нет то присвоем темно синий
+        else {
+            document.getElementById("room3").style.backgroundColor = "blue";
+            isLightOn = false;
+        }
+    });
+</script>
+
+</html>
