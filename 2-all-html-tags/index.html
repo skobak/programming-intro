@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML теги</title>
+</head>
+
+<!-- Комментарий  (CTRL+/) в VSCODE для быстрого комментрия -->
+<!--...-->
+
+<!-- Структура ТЕГА -->
+
+<!--   
+
+    тэг это - <tag>  </tag>
+    атрибут это - <tag key='value'></tag>
+    часто используемые атрибуты: id - уникальное имя, класс = общее имя
+    📚 вложенность тэгов
+     <tag width='50px'>
+      ... <tag2>
+          ... <tag3>
+          ... </tag3>
+      ...</tag2>
+     </tag3>
+  
+ -->
+
+<body>
+    <!-- ****** -->
+    <mark style='font-size:40px;'>Основное</mark>
+    <!-- ***** -->
+
+    <!-- Заголовки : Headers  -->
+    <h1>🍉 Заголовок h1</h1>
+    <h2>🍉 Заголовок h2</h2>
+    <h3>🍉 Заголовок h3</h3>
+    <h4>🍉 Заголовок h4</h4>
+    <h5>🍉 Заголовок h5</h5>
+    <h6>🍉 Заголовок h6</h6>
+
+    <!-- Параграфы: Paragraph -->
+    <p> 🍧 Параграф p</p>
+
+    <!-- Следующая строка Break -->
+    <br></br>
+
+    <!-- Линия : Horisontal -->
+    <hr>
+
+    <!-- ****** -->
+    <mark style='font-size:40px;'>Форматрирование</mark>
+    <br/>
+    <br/>
+    <!-- ***** -->
+
+    <b>	😼 Жирный текст</b>
+    <blockquote>🖋 Цитаты великих людей</blockquote>
+    <code>👩‍💻 Код тут</code>
+    <i> 🧨Наклонный текст</i>
+    <strong> 😼 Жирный текст</strong>
+
+    <template>	Defines a container for content that should be hidden when the page loads </template>
+
+    <!-- ****** -->
+    <hr/>
+    <mark style='font-size:40px;'>Формы (важно!)</mark>
+    <br/>
+    <br/>
+    <!-- ***** -->
+
+    <!-- Формы (контейнеры) -->
+    <form>
+        <input type="text" value='Текст тут' />
+        <textarea> Уже введеный текст </textarea>
+        <button>Конпка</button>
+        <label for="select">Заголовок формы</label>
+        <select name="mySelect" id="select">
+            <option value="1">Да</option>
+            <option value="2">Нет</option>
+        </select>
+    </form>
+
+
+    <!-- Frame (маленький браузер внутри) и защитный механизм-->
+    <iframe src='http://127.0.0.1:5501/index.html?mySelect=1'></iframe>
+
+
+    <!-- Медиа -->
+
+    <img src='cat.png'> </img>
+    <!-- Просто площадка где JavaScript может рисовать -->
+    <canvas width='100px' height='100px' style="border:1px solid #000000;" id='myCanvas'> </canvas>
+
+    <picture>
+        <source media="(min-width:600px)" srcset="cat-nice.png">
+        <img src="cat.png" alt="🐱" style="width:auto;">
+    </picture>
+    <!-- <svg> -->
+</body>
+
+
+
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0, 0);
+    ctx.lineTo(200, 100);
+    ctx.stroke();
+</script>
+
+</html>
