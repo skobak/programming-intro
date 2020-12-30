@@ -145,6 +145,82 @@ Note: Elements after a floating element will flow around it. To avoid this, use 
         </div>
     </div>
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Позиционирование с новым св-вом flex -->
+    <div style='
+    display: flex;
+    flex-direction: row;
+    background: mediumpurple;
+    border:10px solid magenta;
+    '>
+
+        <div style='
+        flex: 30;
+        background:mediumspringgreen;
+        border:10px solid green;
+        '>
+            Контейнер Левый⏹
+
+        </div>
+        <div style='
+        flex: 70;
+        border:10px solid yellow;
+        background: orange;
+        '>
+            Контейнер Правый❎
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+
+    <!-- Немного Адаптива -->
+    <style>
+        .containers {
+            flex-direction: row;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .containers {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+
+    <div class='containers' style='
+    display: flex;
+    background: mediumpurple;
+    border:10px solid magenta;
+    '>
+
+        <div style='
+        flex:50;
+        background:mediumspringgreen;
+        border:10px solid green;
+        '>
+            Контейнер Левый⏹
+
+        </div>
+        <div style='
+        flex:50;
+        border:10px solid yellow;
+        background: orange;
+        '>
+            Контейнер Правый❎
+        </div>
+    </div>
+
 
     <br>
 
